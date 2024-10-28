@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 app.post('/aluno', (req, res) => {
   const {nome, email, nome_curso} = req.body;
-  const vaga = create ({nomw, email, nome_curso});
+  const vaga = create ({nome, email, nome_curso});
   res.status(201).json(vaga);
 });
 
