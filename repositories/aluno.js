@@ -1,22 +1,38 @@
-const {v4: uuidv4} = require  ('uuid');
+const {v4: uuidv4} = require('uuid');
 
-let aluno = [];
+let alunos = [];
 
-function create ({nome, email, nome_curso}){
+function create({nome, email, nome_curso}) {  
     const aluno = {
         id: uuidv4(),
         nome,
         email,
         nome_curso,
-    }
-    aluno.push(aluno);
+        
+    };
+    alunos.push(aluno);
     return aluno;
 }
 
-    module.exports = {
-        create,
-        update,
-        remove,
-        findAll,
+function update(id,{nome, email, nome_curso}) {
+    const index = alunos.findIndex(vaga => vaga.id === id);
+    if (index === -1) {
+        return null;
     }
+    alunos[index] = {
+        id,
+        nome,
+        email,
+        nome_curso,
+    };
+    return alunos[index];
+}
+
+
+
+module.exports = {
+    create,
+    update,
+    remove,
+    findAll
 }
