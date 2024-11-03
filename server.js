@@ -10,11 +10,6 @@ app.get("/", (req, res) => {
   res.send("Servidor Express inicializado...");
 });
 
-app.get('/aluno', (req, res) => {
-  const aluno = findAll();
-  res.json(aluno);
-});
-
 app.post("/aluno", (req, res) => {
   const { nome, email, nome_curso } = req.body;
   const aluno = create({ nome, email, nome_curso });
@@ -35,5 +30,5 @@ app.delete("/aluno/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor Express inicializado na porta ${port}`);
+  console.log(`Server running on port ${port}`);
 });
