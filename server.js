@@ -30,5 +30,5 @@ app.delete("/aluno/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+    console.log(`Servidor Express inicializado na porta ${port}`);
 });
