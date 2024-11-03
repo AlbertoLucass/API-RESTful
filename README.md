@@ -90,3 +90,5 @@ Você pode testar a API usando qualquer cliente REST, como **Postman**, **Insomn
       ```
    - **Exemplo**: Substitua `{id}` pelo ID do aluno que deseja excluir e envie a requisição por um cliente REST.
 
+### Exemplo de como executar a nossa aplicação
+https://github.com/user-attachments/assets/e2f6dab6-7de1-4c0f-a205-bc5240a4a111
