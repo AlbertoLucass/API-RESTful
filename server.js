@@ -10,11 +10,6 @@ app.get("/", (req, res) => {
   res.send("Servidor Express inicializado...");
 });
 
-app.get('/aluno', (req, res) => {
-  const aluno = findAll();
-  res.json(aluno);
-});
-
 app.post("/aluno", (req, res) => {
   const { nome, email, nome_curso } = req.body;
   const aluno = create({ nome, email, nome_curso });
@@ -25,6 +20,11 @@ app.put("/aluno/:id", (req, res) => {
   const { id } = req.params;
   const { nome, email, nome_curso } = req.body;
   const aluno = update(id, { nome, email, nome_curso });
+  res.json(aluno);
+});
+
+app.get('/aluno', (req, res) => {
+  const aluno = findAll();
   res.json(aluno);
 });
 
