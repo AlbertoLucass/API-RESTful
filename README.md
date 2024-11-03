@@ -65,7 +65,7 @@ Você pode testar a API usando qualquer cliente REST, como **Postman**, **Insomn
    - **Exemplo**: Use um cliente REST e inclua o corpo JSON na sua requisição.
 
 ### 3. **Atualizar um Aluno Existente**
-   - **Descrição**: Atualize os dados de um aluno existente pelo ID.
+   - **Descrição**: Atualiza os dados de um aluno existente pelo ID.
    - **Método**: PUT
    - **Endpoint**:
       ```bash
