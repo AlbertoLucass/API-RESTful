@@ -27,6 +27,10 @@ function update(id, { nome, email, nome_curso }) {
   return alunos[index];
 }
 
+function findAll() {
+    return alunos;
+}
+
 function remove(id) {
   const index = alunos.findIndex((aluno) => aluno.id === id);
   if (index === -1) {
