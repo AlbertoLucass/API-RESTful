@@ -28,7 +28,9 @@ function update(id,{nome, email, nome_curso}) {
     return alunos[index];
 }
 
-
+function findAll() {
+    return alunos;
+   }
 
 module.exports = {
     create,
