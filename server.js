@@ -10,6 +10,11 @@ app.get("/", (req, res) => {
   res.send("Servidor Express inicializado...");
 });
 
+app.get('/aluno', (req, res) => {
+  const aluno = findAll();
+  res.json(aluno);
+});
+
 app.post("/aluno", (req, res) => {
   const { nome, email, nome_curso } = req.body;
   const aluno = create({ nome, email, nome_curso });
